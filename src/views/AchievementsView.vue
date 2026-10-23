@@ -30,7 +30,13 @@ export default defineComponent({
         class="achievement-card"
         :class="{ 'achievement-card-unlocked': achievement.unlocked }"
       >
-        <span class="achievement-icon" aria-hidden="true">{{ achievement.icon }}</span>
+        <img
+          v-if="achievement.icon.startsWith('/images/achievement-images/')"
+          class="achievement-icon achievement-icon--image"
+          :src="achievement.icon"
+          :alt="achievement.name"
+        />
+        <span v-else class="achievement-icon" aria-hidden="true">{{ achievement.icon }}</span>
         <div class="achievement-details">
           <h2>{{ achievement.name }}</h2>
           <p>{{ achievement.description }}</p>
