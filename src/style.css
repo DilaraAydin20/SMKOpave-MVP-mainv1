@@ -276,8 +276,20 @@ p {
   padding: clamp(32px, 5vw, 64px) 0 clamp(54px, 8vw, 98px);
 }
 
+.home-page {
+  background-image: url("/images/KMSsp542.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 2rem 4rem 2rem;
+}
+
 .home-hero__copy {
-  max-width: 650px;
+max-width: 650px;
+  border-style: solid;
+  padding: 1rem;
+  border-width: 8px;
+  color: var(--color-paper);
 }
 
 .home-hero h1 {
@@ -291,6 +303,7 @@ p {
   color: var(--color-ink);
   font-size: clamp(19px, 2vw, 24px);
   line-height: 1.35;
+  color: var(--color-paper)
 }
 
 .home-hero__actions {
@@ -939,6 +952,10 @@ input[type="submit"]:disabled,
   .achievement-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .home-page {
+    background-size: 120% auto;
+  }
 }
 
 @media (max-width: 650px) {
@@ -997,6 +1014,10 @@ input[type="submit"]:disabled,
 
   .home-hero__artwork img {
     height: min(88vw, 390px);
+  }
+
+  .home-page {
+    background-size: 160% auto;
   }
 
   .artwork-grid,
