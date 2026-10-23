@@ -19,25 +19,25 @@ const categoryAchievements: {
   {
     category: 'Portrætter',
     id: 'portrait-expert',
-    icon: '🖼️',
+    icon: '/images/achievement-images/portrait-expert.jpg',
     name: 'Portrætekspert'
   },
   {
     category: 'Skulpturer og statuer',
     id: 'sculpture-hunter',
-    icon: '🗿',
+    icon: '/images/achievement-images/sculpture-hunter.jpg',
     name: 'Skulpturjæger'
   },
   {
     category: 'Landskaber og steder',
     id: 'pathfinder',
-    icon: '🧭',
+    icon: '/images/achievement-images/pathfinder.jpg',
     name: 'Stifinder'
   },
   {
     category: 'Dyr',
     id: 'animal-lover',
-    icon: '🐾',
+    icon: '/images/achievement-images/animal-lover.jpg',
     name: 'Dyreven'
   }
 ]
@@ -74,7 +74,7 @@ export function getAchievements(progress: ProgressState): Achievement[] {
   achievements.push(
     {
       id: 'three-in-a-row',
-      icon: '🎯',
+      icon: '/images/achievement-images/bullseye-solid.png',
       name: 'Three in a Row',
       description: 'Gennemfør 3 forskellige udfordringer i den samme kategori.',
       progress: `${Math.min(maxCategoryCount, 3)}/3`,
@@ -82,7 +82,7 @@ export function getAchievements(progress: ProgressState): Achievement[] {
     },
     {
       id: 'art-explorer',
-      icon: '🧭',
+      icon: '/images/achievement-images/compass-regular.png',
       name: 'Art Explorer',
       description: 'Gennemfør alle 15 kunstværksudfordringer.',
       progress: `${allChallengesCompleted}/15`,
@@ -90,7 +90,7 @@ export function getAchievements(progress: ProgressState): Achievement[] {
     },
     {
       id: 'perfect-answer',
-      icon: '✨',
+      icon: '/images/achievement-images/star-regular.png',
       name: 'Perfect Answer',
       description: 'Besvar en udfordring korrekt i første forsøg.',
       progress: firstTryCorrect ? '1/1' : '0/1',
@@ -98,7 +98,7 @@ export function getAchievements(progress: ProgressState): Achievement[] {
     },
     {
       id: 'collector',
-      icon: '🏆',
+      icon: '/images/achievement-images/trophy-solid.png',
       name: 'Collector',
       description: 'Saml alle 15 kunstværker i din samling.',
       progress: `${allCollected}/15`,
